@@ -7,4 +7,6 @@ def printLanes():
         print(i)
 
 def randomRoadData():
-    
+    for i in roaddata:
+        for j in i:
+            j.Randomize()
