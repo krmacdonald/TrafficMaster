@@ -23,9 +23,8 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    mouseCoords = pygame.mouse.get_pos()
-    playerMouse.update(screen, mouseCoords)
-    screen.blit(playerMouse.scaledimg, mouseCoords)
+    screen.blit(playerMouse.scaledimg, pygame.mouse.get_pos())
+    
     if pygame.key.get_focused():
         keys = pygame.key.get_pressed()
         if keys[pygame.K_ESCAPE]:
